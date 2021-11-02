@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guess card</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ! header -->
+    <header>
+        <button class="btn restart-btn">Restart</button>
+        <h2 class="highscore-text">highscore: <span class="highscore-num"></span></h2>
+        <div class="result-div">
+            <h4 class="hearts-text">
+                hearts: <span class="hearts-num">❤❤❤❤❤</span>
+            </h4>
+            <h4 class="score-text">Score: <span class="score-num">0</span></h4>
+        </div>
+    </header>
+    <h1 class="tittle">Guess The Next Card</h1>
+
+    <!-- ! playing space -->
+    <div class="playing-space">
+      <div class="cards">
+        <img src="./img/card-box.png" alt="" class="card-box" />
+        <img src="card-1.png" alt="card" class="card" />
+      </div>
+      <h2>The Next Card Is</h2>
+      <div class="buttons">
+        <button class="btn guess-btn lower-btn">Lower &#9660;</button>
+        <button class="btn guess-btn higher-btn">Higher &#9650;</button>
+        <button class="btn start-btn">Start</button>
+      </div>
+    </div>
+  </body>
+</html>

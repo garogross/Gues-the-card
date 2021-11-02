@@ -1,0 +1,169 @@
+:root{
+  --white-color: #fff
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 800;
+    font-family: 'Heebo', sans-serif;
+}
+body{
+     background: linear-gradient(to right top, #090537, #72054e, #c33538, #dc8e00, #a8eb12);
+     height: 100vh;
+}
+.lose-body{
+background: rgb(43, 1, 1)
+}
+
+/* ! header */
+
+
+header{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 5px;
+    align-items: center;
+    position: relative;
+}
+.tittle{
+    font-size: 64px;
+    text-align: center;
+}
+
+.result-div{
+    width: 326px;
+}
+.hearts-text{
+    font-size: 32px;
+}
+.score-text{
+    font-size: 32px;
+}
+.highscore-text{
+    font-size: 46px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.white-text{
+    color: #fff;
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 16px;
+    font-size: 24px;
+    border-radius: 25px;
+    letter-spacing: inherit;
+    transition: all 1s;
+
+}
+
+.restart-btn:hover{
+    background-color: #090537;
+    color: var(--white-color);
+}
+
+
+/* ! playing space */
+
+.playing-space{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-self: center;
+}
+.card{
+    width: 150px;
+    height: 210.688px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    
+}
+.card-anim{
+    animation: open-card 2s;
+    animation-fill-mode: forwards;
+}
+.card-box{
+    width: 150px;
+    z-index: 1;
+}
+.playing-space h2{
+    margin: 15px 0;
+    font-size: 32px;
+}
+.guess-btn{
+   margin: 0 10px;
+}
+.buttons{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.start-btn{
+    width: 280px;
+    height: 52px;
+    letter-spacing: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: none; */
+}
+.start-btn:hover{
+    background-color: #090537;
+    color: var(--white-color);
+}
+.hidden-opp{
+    opacity: 0;
+    transition: opacity 2s;
+}
+.hidden-display{
+    display: none;
+}
+.lower-btn:hover{
+  background-color: rgb(255, 0, 21);
+  color: var(--white-color);
+}
+.higher-btn:hover{
+    background-color: rgb(0, 255, 76);
+    color: var(--white-color);
+  }
+
+
+
+
+
+
+
+
+/* ! animations */
+
+
+@keyframes open-card {
+    from{
+        left: 0;
+    }
+    to{
+        left: calc(100% - 150px)
+    };
+}
